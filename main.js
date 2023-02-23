@@ -1,49 +1,58 @@
-// Your code here.
+// // Your code here.
 
-// getFirstName
-function getFirstName(person){
-  return person.firstName;
+//                                 || GET FIRST NAME ||
+
+function getFirstName(obj){
+  return obj.firstName;
 }
 
-// getLastName
-function getLastName(person){
-  return person.lastName;
+//                                 || GET LAST NAME ||
+
+function getLastName(obj){
+  return obj.lastName;
 }
 
-//getFullName
-function getFullName(person){
-  return person.firstName+ " " + person.lastName;
+//                                 || GET FULL NAME ||
+
+function getFullName(obj1){
+  return obj1.firstName + ' ' + obj1.lastName;
 }
 
-// setFirstName
-function setFirstName(person,newFirstName){
-  person.firstName = newFirstName;
+//                                 || SET FIRST NAME ||
+
+function setFirstName(obj,newName){
+  obj.firstName = newName;
 }
 
-// setAge
-function setAge(person,newAge){
-  person.age = newAge;
+//                                 || SET AGE ||
+
+function setAge(obj,newAge){
+  obj.age = newAge;
 }
 
-// giveBirthday
-function giveBirthday(person){
-  if(person.age === undefined){
-    person.age = 1;
+//                                 || GIVE BIRTHDAY ||
+
+function giveBirthday(obj){
+
+  if(obj.age === undefined){
+    obj.age = 1;
   }else{
-    person.age += 1;
+    obj.age += 1;
   }
 }
 
-// marry
+//                                 || MARRY ||
+
 function marry(person1,person2){
   person1.married = true;
   person2.married = true;
 
-  person1.spouseName = person2.firstName + " " + person2.lastName;
-  person2.spouseName = person1.firstName + " " + person1.lastName;
+  person1.spouseName = person2.firstName + ' ' + person2.lastName;
+  person2.spouseName = person1.firstName + ' ' + person1.lastName;
 }
 
-// divorce
+//                                 || DIVORCE ||
+
 function divorce(person1,person2){
   person1.married = false;
   person2.married = false;
@@ -52,7 +61,8 @@ function divorce(person1,person2){
   delete person2.spouseName;
 }
 
-// Our code here. Don't touch!
+//////////////////////////////// || DON'T TOUCH || /////////////////////////////////////////////
+
 if (typeof getFirstName === 'undefined') {
   getFirstName = undefined
 }
